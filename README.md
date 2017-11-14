@@ -16,4 +16,13 @@ The loop is slighly inefficient here. I could have written a function, then used
 
 But I doubt that the for loop is the bottleneck. Hence, I didn't seek to optimise it.
 
+Steps to view downloaded data in yahoo spreadsheet
+- Replace working directory in .xlsm file
+- Download R
+- Install 'library' packages if you haven't
+- Replace working directories in R to your wokring directory.
+- Run update.R to download data from yahoo and copying it to the .xlsm spreadsheet.
+
+Do contact me @ jironghuang88@gmail.com if you've any issues.
+
 PS: I suspect google finance might have a more efficient solution. Will try to explore that when I've time.
