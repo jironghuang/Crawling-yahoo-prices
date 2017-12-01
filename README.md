@@ -10,7 +10,7 @@ I'm unsure if this is the best solution but I managed to succesfully create a pl
 -Div yield
 -52 week range (high and low)
 
-For 216 ticker symbols, it took around 9 mins to do so.
+For 126 ticker symbols, it took around 9 mins to do so.
 
 The loop is slighly inefficient here. I could have written a function, then used lapply as seen in my fortune info crawlers.
 
