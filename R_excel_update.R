@@ -3,7 +3,18 @@ library(RDCOMClient)
 
 # Open a specific workbook in Excel:
 xlApp <- COMCreate("Excel.Application")
-xlWbk <- xlApp$Workbooks()$Open("C:/Users/Huang Jirong/Desktop/Jirong's 5YP-ASUS.xlsm")
+
+# wd = file.path("C:", "Users", "Huang Jirong", "Desktop", "Jirong's 5YP-ASUS.xlsm" )
+
+
+if( .Platform$OS.type == "windows" ){
+  wd = file.path("C:", "Users", "Huang Jirong", "Desktop", "Jirong's 5YP-ASUS.xlsm", fsep = .Platform$file.sep)
+}else{
+  wd = "/mnt/c/Users/Huang Jirong/Desktop/Jirong's 5YP-ASUS.xlsm"
+}
+
+
+xlWbk <- xlApp$Workbooks()$Open(wd)
 
 # this line of code might be necessary if you want to see your spreadsheet:
 xlApp[['Visible']] <- TRUE

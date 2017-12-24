@@ -3,12 +3,21 @@
 #Scraping financial information from yahoo to fill up yahoo spreadsheet
 #Use spell-checker algortihm to match the company in 2000 to Fortune
 library("stringr")
-library("XML")  #for parsing
-library("rvest")
-library("RCurl")  
+# library("XML")  #for parsing
+# library("rvest")
+library("RCurl")
 
 #Change your working directory here
-setwd("C:/Users/Huang Jirong/Google Drive/Shiny/yahoo prices")
+
+
+if( .Platform$OS.type == "windows" ){
+  wd = file.path("C:", "Users", "Huang Jirong", "Google Drive", "Shiny","yahoo prices", fsep = .Platform$file.sep)
+}else{
+  wd = "/mnt/c/Users/Huang Jirong/Google Drive/Shiny/yahoo prices"
+}
+
+
+setwd(wd)
 
 ###################################Scraping direclty from website########################
 #########################################################################################
@@ -29,7 +38,7 @@ yahoo_list$fifty_two_weeklow = ""
 
 for(i in 1:nrow(yahoo_list)){
   tryCatch({
-  print(i);print(yahoo_list$Ticker[i])
+  print(i);print(yahoo_list$Ticker[i]);yahoo_list$Price[i-1]
   html = getURL(yahoo_list$link[i]) 
   if(length(html)>=1){
     # a = as.data.frame(html); a$html = as.character(a$html)
