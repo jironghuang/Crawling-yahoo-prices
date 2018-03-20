@@ -1,6 +1,6 @@
 # Crawling-yahoo-prices
 
-Update: I've updated my process in a way that I parallelize it use linux bash commands (actually I can sue R mcmapply function. But oh well). Crawling is scheduled in my personal laptop using crontab.
+Update: I've updated my process in a way that I parallelize it using linux bash commands (alternatively I could restructure the code to use R mcmapply function. But oh well). Crawling is scheduled daily in my personal laptop through crontab.
 
 Unfortunately Yahoo has restricted the access to its finance info API. In the past, I used VBA in my personal spreadsheet to access download.yahoo bla bla bla API. But this came to a halt last Thursday.
 
