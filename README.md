@@ -1,5 +1,7 @@
 # Crawling-yahoo-prices
 
+Update: I've updated my process in a way that I parallelize it use linux bash commands (actually I can sue R mcmapply function. But oh well). Crawling is scheduled in my personal laptop using crontab.
+
 Unfortunately Yahoo has restricted the access to its finance info API. In the past, I used VBA in my personal spreadsheet to access download.yahoo bla bla bla API. But this came to a halt last Thursday.
 
 I spent a good 2 hours on the following Saturday to create an interface plug-in to crawl prices from yahoo through R. And established the link to my exisiting spreasheet.
